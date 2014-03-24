@@ -421,7 +421,7 @@ void ReadKeyValuePairsForWay(char*& s, map<string, ParameterValues*>& mapInclude
 							bool& fBreakUpThisWay, bool& fSkipThisWay, bool& fFoundAtLeastOneIncludedValueInThisWay,
 							int& nNumberOfMandatoryKeysFoundForThisWay)
 {
-	fBreakUpThisWay = false;
+	fBreakUpThisWay = true;
 
 	char* tag = strstr(s, "<tag k=\""), * tag_end = (tag != NULL ? strstr(tag + 8, "\"") : NULL);
 	if (tag != NULL && tag_end != NULL)
