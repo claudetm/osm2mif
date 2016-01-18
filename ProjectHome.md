@@ -1,0 +1,5 @@
+Converts an Open Street Map file (.OSM) to mid/mif output, creating a topology for routing (that is, breaking up the OSM ways at intersection points, and also processing "no right turn" restriction relations).
+
+Can use filtering to convert only within a given coordinate bounding box; also can convert only a subset of features (e.g. just roads, or just coastlines and lakes/rivers, or some given mixture); can also transform tag values to given strings, and use particular MIF styles (pen style, polyline vs region etc) based on the given tag values.
+
+The program is written in C++ and contains only one file, with less than 1000 lines, and no external dependencies apart from the standard library.  Compiles under both Windows (Visual Studio) and Linux (GCC).  Runs pretty quickly for OSM files under a Gigabyte, but does use up lots of RAM when running.
